@@ -10,4 +10,3 @@ def pow(a, b):
             return (pow)
         else:
             return (1 / pow)
-
