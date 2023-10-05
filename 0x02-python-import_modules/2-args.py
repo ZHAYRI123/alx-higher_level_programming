@@ -5,7 +5,9 @@ if __name__ == "__main__":
     print("{} argument".format(m), end='')
     if m == 0:
         print("s.")
+    elif m > 1:
+        print("s:")
     else:
         print(":")
-        for i in range(m):
+    for i in range(m):
             print("{}: {}".format(i + 1, sys.argv[i + 1]))
