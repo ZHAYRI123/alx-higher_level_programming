@@ -11,6 +11,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
             tuple_b = 0, 0
         else:
             typle_b = typle_b[0], 0
-    add_typle = typle_a[0] + typle_b[0], typle_a[1] + typle_b[1]
-    return(add_typle)
+    
+    return (typle_a[0] + typle_b[0], typle_a[1] + typle_b[1])
 ~
