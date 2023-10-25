@@ -9,6 +9,6 @@ def safe_print_list_integers(my_list=[], x=0):
                 break
         else:
             continue
-    m += 1
+        m += 1
     print()
     return m
