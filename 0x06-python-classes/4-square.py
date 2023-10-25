@@ -1,17 +1,12 @@
 #!/usr/bin/python3
 """Define classes"""
 
+
 class Square:
     """square class"""
 
     def __init__(self, size=0):
-        """initialise size value
-        args: size - squares size
-        raise: TypeError or Valueerror"""
-        if size < 0:
-            raise ValueError('size must be >= 0')
-        if not isinstance(size, int):
-            raise TypeError('size must be an integer')
+        """initialise size value"""
         self.__size = size
         
     @property
@@ -21,11 +16,13 @@ class Square:
 
     @size.setter
     def size(self, value):
-        if size < 0:
+        """property setter of size"""
+        if value < 0:
             raise ValueError('size must be >= 0')
-        if not isinstance(size, int):
+        if not isinstance(value, int):
             raise TypeError('size must be an integer')
-        self.__size = size
+        self.__size = value
+
     def area(self):
         """square value"""
 
