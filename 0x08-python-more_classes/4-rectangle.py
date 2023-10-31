@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """Def class"""
 
+
 class Rectangle:
     """rep of a rectangle"""
     def __init__(self, width=0, height=0):
+        """Instantiation with optional width and height"""
         self.width = width
         self.height = height
 
