@@ -1,10 +1,9 @@
-#!/usr/bin/python3
-"""Def class"""
+#!/usr/bin/python3i
+"""defi classe"""
 
 
 class Rectangle:
-    """rep of a rectangle"""
-
+    """Rec classe"""
     def __init__(self, width=0, height=0):
         """Instantiation with optional width and height"""
         self.width = width
@@ -12,12 +11,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """to retrieve it"""
+        """ to retrieve it"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ to set it"""
+        """to set it:"""
         if type(value) is not int:
             raise TypeError('width must be an integer')
         elif value < 0:
@@ -27,16 +26,16 @@ class Rectangle:
 
     @property
     def height(self):
-        """ to retrieve it"""
+        """to retrieve it"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """to set it"""
+        """to set it:"""
         if type(value) is not int:
             raise TypeError('height must be an integer')
         elif value < 0:
-            raise Value Error('height must be >= 0')
+            raise ValueError('height must be >= 0')
         else:
             self.__height = value
 
@@ -45,20 +44,19 @@ class Rectangle:
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """returns the rectangle perimeter""" 
+        """returns the rectangle perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
-            return ((self.__height + self.__width) * 2)
+            return ((self.__width * 2) + (2 * self.__height))
 
     def __str__(self):
-        """ print the rectangle with the character #"""
+        """returns str"""
         string = ""
         if self.__width != 0 and self.__height != 0:
-            string += "\n".join("#" * self.__width for j in range(self.__height))
-
+            string += "\n".join("#" * self.__width for i in range(self.__height))
         return (string)
 
     def __repr__(self):
-        """return a string representation of the rectangle to be able to recreate a new instance by using eval()"""
-        return ("Rectange({:d}, {:d})".format(self.__width, self.__height))
+        """return a string representation of the rectangle"""
+        return ("Rectangle({:d}, {:d}".format(self.__width, self.__height)
