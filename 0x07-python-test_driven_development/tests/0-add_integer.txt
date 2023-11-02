@@ -1,0 +1,51 @@
+The ''0-add_integer'' module
+======================
+
+Using ``add_integer``
+-------------------
+
+Importing the function from the module:
+	>>>add_integer = __import__("0-add_integer").add_integer
+
+Checking for the module docstring:
+	>>>m = __import__("0-add_integer").add_integer.__doc__
+	>>>len(f) > 1
+	True
+
+Checking regular addition:
+	>>>add_integer(2, 3)
+	5
+Checking regular addition:
+	>>>add_integer(2, -4)
+	-2
+
+Checking regular addition:
+	>>>add_integer(-6, 8)
+	2
+
+Checking regular addition:
+	>>>add_integer(100.3, -2)
+	98
+
+Checking regular addition:
+	>>>add_integer(4, "School")
+	Traceback (mot recent call last):
+	...
+	TypeError: b must be an integer
+
+Checking no args:
+	>>>add_integer()
+	Traceback (mot recent call last):
+	...
+	TypeError: add_integer missing to required positional arguments: 'a' and 'b'
+Checking one arg:
+	>>>add_integer(2)
+	Traceback (mot recent call last):
+	...
+	TypeError: add_integer missing 1 required positional argument: 'b'
+
+Checking more than 2 args:
+	>>>add_integer(2, 3, 4)
+	Traceback (mot recent call last):
+	...
+	TypeError: add_integer() takes 2 args but 3 were given
