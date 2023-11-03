@@ -1,0 +1,30 @@
+The ''3-say_my_name'' module
+==========================
+
+Using "say_my_name"
+-------------
+
+Checking 1 arg:
+>>> say_my_name(taha)
+My name is taha
+
+checking 2 args:
+>>> say_my_name(taha, aya)
+My name is taha aya
+
+Checking more tan 2 args:
+>>> say_my_name(taha, aya, ima)
+Traceback(most recent call last)
+...
+Typeerror: function require 2 argumets
+
+Checking not string value:
+>>> say_my_name(taha, 2)
+Traceback(most recent call last)
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(2, Taha)
+Traceback(most recent call last)
+...
+TypeError: first_name must be a string
