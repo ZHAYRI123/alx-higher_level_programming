@@ -35,3 +35,6 @@ class TestMaxInteger(unittest.TestCase):
         """list has negative & positive item"""
         my_list = [-1, 2, -3, 4]
         self.assertEqual(max_integer(my_list), 4)
+
+    if __name__ == '__main__':
+        unittest.main()
