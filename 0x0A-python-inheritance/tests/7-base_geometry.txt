@@ -1,0 +1,23 @@
+The ''7-base_geometry'' module
+=========================
+
+Using "integer_validator"
+---------------------
+
+Check the type of the value:
+>>> bg.integer_validator("my_int", "jon")
+Traceback(most call recent):
+...
+TypeError: my_int must be an integer
+
+Check the type of the value:
+>>> bg.integer_validator("my_int", 0)
+Traceback(most call recent):
+...
+ValueError: my_int must be greater than 0
+
+Check the type of the value:
+>>> bg.integer_validator("my_int", -10)
+Traceback(most call recent):
+...
+ValueError: my_int must be greater than 0
