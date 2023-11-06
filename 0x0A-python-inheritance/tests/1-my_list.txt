@@ -1,0 +1,20 @@
+The ''1-my_list'' module
+=====================
+
+Using ''print_sorted''
+------------------
+
+Checking empty one:
+>>> my_list = []
+>>> my_list.print_sorted()
+[]
+
+Checking list of one elem:
+>>> my_list = [1]
+>>> my_list.print_sorted()
+[1]
+
+checking of a list of more than one elem:
+>>> my_list = [1, 4, 6, 0]
+>>> my_list.print_sorted()
+[0, 1, 4, 6]
