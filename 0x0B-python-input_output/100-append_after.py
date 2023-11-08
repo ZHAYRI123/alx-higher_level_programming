@@ -12,4 +12,11 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename, 'r', encoding='UTF8') as file:
         l_list = []
         while True:
-            line = f.readline()
+            li = file.readline()
+            if li == "":
+                break
+            l_list.append(li)
+            if search_string in li:
+                l_list.append(new_string)
+    with open(filename, 'w', encoding='UTF8') as file:
+        file.writelines(line_list)
