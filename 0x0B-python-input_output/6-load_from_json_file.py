@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-has a load_from_json_file fct 
+has a load_from_json_file fct
 """
 
 
