@@ -4,9 +4,7 @@ Adds arguments to a Python list,save them to a file
 """
 
 
-from sys import args
-
-
+from sys import argv
 save_to_json_file = __import__(5-save_to_json_file.py).save_to_json_file
 load_from_json_file = __import__(6-load_from_json_file.py).load_from_json_file
 
@@ -17,7 +15,7 @@ try:
 except FileNotFoundError:
     JS_List = []
 
-for arg in args[1:]:
+for arg in argv[1:]:
     JS_List.append(arg)
 
 save_to_json_file(JS_List, filename)
