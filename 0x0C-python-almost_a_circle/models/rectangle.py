@@ -76,5 +76,51 @@ class Rectangle(Base):
 
     def display(self):
         """prints in stdout the Rectangle instance with:#"""
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+        for i in range(self.y):
+            print("")
         for i in range(self.height):
-            print("#" * self.width)
+            print("" * self.x, end="")
+            print("#" * self.width, end="")
+            print("")
+
+    def update(self, *args, **kwargs):
+        """ assigns an argument to each attribute:"""
+        if len(args) != 0:
+            m = 0
+            for arg in args:
+                if m == 0:
+                    if arg == None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif m == 1:
+                    self.width = arg
+                elif m == 2:
+                    self.height = arg
+                elif m == 3:
+                    self.x = arg
+                elif m == 4:
+                    self.y = arg
+                m += 1
+        elif len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v == None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = v
+                elif k == "width":
+                    self.width = v
+                elif k == "height":
+                    self.height = v
+                elif k == "x":
+                    self.x = v
+                elif k == "y":
+                    self.y = v
+
+    def __str__(self):
+        """returns:[Rectangle] id x/y - width/height"""
+        return (f"({self.id}) {self.x}/{self.y} - {self.width}/{self.height}")
