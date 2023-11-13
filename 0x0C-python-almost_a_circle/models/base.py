@@ -66,3 +66,20 @@ class Base:
         except IOError:
             return ([])
 
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ that serializes and deserializes in CSV"""
+        filename = cls.__name__ + "cvs"
+        with open(filename, "w", newline="") as cvsfile:
+            if (not list_objs or list_objs == []):
+                cvsfile.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    field = ["id", "width", "height", "x", "y"]
+                else:
+                    field = ["id", "size", "x", "y"]
+                dic_list = cvs.DictReader(cvsfile, fielnames = fiel)
+                dic_list = [dict([k, int(value)] for k, value inm.items())
+                        for m in dic_list]
+                return ([cls.create(**m) for m in dic_list])
+
