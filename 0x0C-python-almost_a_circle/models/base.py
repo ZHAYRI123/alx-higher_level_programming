@@ -69,7 +69,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """ that serializes and deserializes in CSV"""
-        filename = cls.__name__ + "cvs"
+        filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as cvsfile:
             if (not list_objs or list_objs == []):
                 cvsfile.write("[]")
@@ -78,8 +78,7 @@ class Base:
                     field = ["id", "width", "height", "x", "y"]
                 else:
                     field = ["id", "size", "x", "y"]
-                dic_list = cvs.DictReader(cvsfile, fielnames = fiel)
-                dic_list = [dict([k, int(value)] for k, value inm.items())
-                        for m in dic_list]
-                return ([cls.create(**m) for m in dic_list])
+                dic_list = csv.DictWriter(cvsfile, fielnames = fiel)
+                for m in list_objs:
+                    dic_list.writerow(obj.to_dictionary())
 
