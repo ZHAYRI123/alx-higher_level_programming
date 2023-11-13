@@ -61,8 +61,8 @@ class Base:
         filename = str(cls.__name__) + ".json"
         try:
             with open(filename, 'r') as jsfile:
-                dic_list = Base.from_json_string(jsonfile.read())
-                return [cls.creat(**m) for m in dic_list]
+                dic_list = Base.from_json_string(jsfile.read())
+                return [cls.create(**m) for m in dic_list]
         except IOError:
             return ([])
 
