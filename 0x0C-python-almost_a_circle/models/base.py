@@ -9,6 +9,7 @@ class Base:
     """Represent the Base model"""
 
     __nb_objects = 0
+    
     def __init__(self, id=None):
         """Initialise a new Base"""
         if id is not None:
