@@ -15,6 +15,6 @@ if (isNaN(arg))
 			li = li + 'X';
 			j++;
 		}
-		console.log("li");
+		console.log(li);
 		i++;
 	}}
