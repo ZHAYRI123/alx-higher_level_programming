@@ -1,15 +1,19 @@
 #!/usr/bin/node
 const arg = parseInt(process.argv[2]);
-let fact = 1;
+function fact(a)
+{
+	let f = 1;
+	for(i = 1; i <= a; i++)
+        {
+                f = f * i;
+        }
+	return f;
+}
 if (isNaN(arg))
 {
 	console.log("1");
 }
 else
 {
-	for(i = 1; i <= arg; i++)
-	{
-		fact = fact * i;
-	}
-	console.log(fact);
+	console.log(fact(arg));
 }
